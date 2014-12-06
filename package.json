@@ -1,0 +1,29 @@
+{
+  "name": "watch-run",
+  "version": "0.0.0",
+  "description": "watch files and run command on change",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "watch-run": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hektorw/watch-run.git"
+  },
+  "keywords": [
+    "watch"
+  ],
+  "author": "Hektor Wallin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hektorw/watch-run/issues"
+  },
+  "homepage": "https://github.com/Hektorw/watch-run",
+  "dependencies": {
+    "colors": "~1.0.3"
+  }
+}
