@@ -8,8 +8,25 @@ var exec = require('child_process').exec;
 var settings = require('./settings.js').parseArgs(process.argv);
 
 
-function command() {
-  if (command.running) return;
+function command(event, file) {
+  var skip = false;
+
+  if (event === 'rename' && file === null) {
+    skip = true;
+  }
+  if (file) {
+    if (file.indexOf('.TMP') !== -1) { // temp files
+      skip = true;
+    }
+    if (file[0] === '.') { // hidden files
+      skip = true;
+    }
+  }
+
+
+  // console.log('change'.yellow, arguments, 'running:', command.running, 'skip:', skip);
+
+  if (skip || command.running) return;
 
   command.running = true;
 
